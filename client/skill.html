@@ -30,12 +30,13 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center orange-text">Starter Template</h1>
+      <h1 id="judul" class="header center orange-text">Starter Template</h1>
       <div class="row center">
         <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
       </div>
+      <input id='hiddenurl' type="hidden" url="https://qblol.com"/>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Tombol Ajaib</a>
+        <a onclick="ubahUrl()" class="btn-large waves-effect waves-light orange">Tombol Ajaib</a>
       </div>
       <br><br>
 
@@ -125,6 +126,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
+  <script type="text/javascript">
+  function ubahUrl() {
+    var web = $('#hiddenurl').attr('url')
+    console.log(web);
+    $('#judul').text(web)
+  }
+  </script>
   </body>
 </html>
